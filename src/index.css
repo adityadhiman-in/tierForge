@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 15% 8%;
+    --foreground: 210 20% 92%;
+
+    --card: 225 14% 12%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 225 14% 14%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 35 95% 58%;
+    --primary-foreground: 225 15% 8%;
+
+    --secondary: 225 12% 18%;
+    --secondary-foreground: 210 20% 85%;
+
+    --muted: 225 12% 16%;
+    --muted-foreground: 215 12% 55%;
+
+    --accent: 35 90% 52%;
+    --accent-foreground: 225 15% 8%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 225 12% 20%;
+    --input: 225 12% 22%;
+    --ring: 35 95% 58%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 225 14% 10%;
+    --sidebar-foreground: 210 20% 85%;
+    --sidebar-primary: 35 95% 58%;
+    --sidebar-primary-foreground: 225 15% 8%;
+    --sidebar-accent: 225 12% 18%;
+    --sidebar-accent-foreground: 210 20% 85%;
+    --sidebar-border: 225 12% 20%;
+    --sidebar-ring: 35 95% 58%;
+
+    /* Tier colors */
+    --tier-s: 0 85% 55%;
+    --tier-a: 25 95% 55%;
+    --tier-b: 45 95% 55%;
+    --tier-c: 140 60% 45%;
+    --tier-d: 210 70% 55%;
+    --tier-f: 225 10% 40%;
+
+    /* Brand gradient */
+    --gradient-brand: linear-gradient(135deg, hsl(35 95% 58%), hsl(15 90% 55%));
+    --gradient-surface: linear-gradient(180deg, hsl(225 14% 14%), hsl(225 15% 10%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .gradient-brand {
+    background: var(--gradient-brand);
+  }
+
+  .gradient-surface {
+    background: var(--gradient-surface);
+  }
+
+  .tier-item-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(35 95% 58% / 0.15);
+  }
+}
